@@ -1,0 +1,323 @@
+/*!***********************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!../node_modules/group-css-media-queries-loader/lib/index.js!./sass/main.scss ***!
+  \***********************************************************************************************************************************************************************/
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary-color: rgb(139, 122, 161);
+  --body-color: #202020;
+  --back-cell: rgba(201, 204, 213, 0.8);
+  --field-color: #292929;
+  --front-color: #373737;
+  --flag-color: #616161;
+  --flag-color-1: #303030;
+  --border-color: #4d4d4d;
+  --text-1-color: #939393;
+  --color-1: #56afd3;
+  --color-2: #f7f992;
+  --color-3: #59c565;
+  --color-4: #6cccbc;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--body-color);
+  color: var(--primary-color);
+  user-select: none;
+  transition: all 0.3s;
+}
+
+body.bright {
+  --primary-color: #ffe3e3;
+  --body-color: #ffe3e3;
+  --field-color: #93b5c6;
+  --front-color: #211d1d;
+  --back-cell: rgba(201, 204, 213, 0.8);
+  --flag-color: #f6f6f670;
+  --flag-color-1: #989898;
+  --border-color: #b9d7ea7f;
+  --text-1-color: #939393;
+  --color-1: #56afd3;
+  --color-2: #f7f992;
+  --color-3: #59c565;
+  --color-4: #6cccbc;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.none {
+  display: none;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-1-color);
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
+}
+body.bright .cell {
+  border: none;
+  background-color: var(--back-cell);
+}
+.cell__flag {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  color: var(--flag-color-1);
+}
+.cell.flag .cell__flag {
+  display: block;
+}
+.cell::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.cell.open::before {
+  transform: scale(0);
+  visibility: hidden;
+}
+
+.mine {
+  color: rgb(212, 72, 72);
+}
+
+.game {
+  padding: 40px 50px;
+  margin: auto;
+  font-size: 20px;
+  background-color: var(--field-color);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+
+body.bright .game {
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.138);
+  border: none;
+}
+
+.game__header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.game__time {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.time {
+  display: flex;
+}
+
+.game__flag {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.game__click {
+  margin-left: 20px;
+}
+
+.game__settings {
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+}
+.game__settings i {
+  font-size: 25px;
+}
+.game__settings.active .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 18px;
+  top: 28px;
+  width: 220px;
+  background-color: var(--body-color);
+  color: var(--flag-color);
+  flex-direction: column;
+  gap: 15px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  z-index: 20;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+body.bright .menu {
+  border: none;
+  color: var(--flag-color-1);
+}
+.menu li {
+  transition: color 0.3s;
+}
+.menu li:hover:not(:last-child) {
+  color: var(--primary-color);
+}
+body.bright .menu li:hover:not(:last-child) {
+  color: var(--field-color);
+}
+.menu__level {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__level span {
+  padding: 4px 10px;
+  border-radius: 10px;
+  background-color: rgba(114, 112, 112, 0.148);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu__level span:hover {
+  color: var(--primary-color);
+  background-color: var(--field-color);
+}
+.menu__color {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.game__field {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 4px;
+}
+.game__field.hard {
+  grid-template-columns: repeat(15, 25px);
+  grid-template-rows: repeat(15, 25px);
+}
+.game__field.expert {
+  grid-template-columns: repeat(20, 25px);
+  grid-template-rows: repeat(20, 25px);
+  gap: 2px;
+}
+
+.icon {
+  color: var(--flag-color);
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+  .game.hard,
+  .game.expert {
+    padding: 5px;
+  }
+  .game__field.expert {
+    grid-template-columns: repeat(20, 22px);
+    grid-template-rows: repeat(20, 22px);
+  }
+}
+.color-1 {
+  color: var(--color-1);
+}
+
+.color-2 {
+  color: var(--color-2);
+}
+
+.color-3 {
+  color: var(--color-3);
+}
+
+.color-4 {
+  color: var(--color-4);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.modal__content {
+  position: relative;
+  background-color: var(--body-color);
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  width: 400px;
+  border-radius: 10px;
+}
+body.bright .modal__content {
+  color: var(--flag-color-1);
+}
+.modal__title {
+  font-size: 25px;
+  text-align: center;
+}
+.modal__descr {
+  text-align: center;
+}
+.modal__close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: transparent;
+  color: var(--flag-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+body.bright .modal__close {
+  border-color: var(--flag-color-1);
+  color: var(--flag-color-1);
+}
+.modal__close:hover {
+  background-color: var(--primary-color);
+}
+body.bright .modal__close:hover {
+  background-color: var(--field-color);
+  border-color: var(--field-color);
+  color: var(--primary-color);
+}
+.modal.active {
+  display: block;
+}

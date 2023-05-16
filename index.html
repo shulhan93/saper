@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+	<title>Minesweeper</title>
+<script defer="defer" src="main.16f04ee5870f49e15a23.js"></script><link href="vendor.7fdd86579beb9db65d5e.css" rel="stylesheet"><link href="main.e75b05e4b2420a77b7b5.css" rel="stylesheet"></head>
+
+<body>
+	<div class="wrapper">
+
+		<div class="game" id="game">
+			<div class="game__header">
+				<div class="game__time">
+					<i class="icon ri-time-line"></i>
+					<div class="time">
+						<span class="time__minutes">00</span>
+						<span class="time__sep">:</span>
+						<span class="time__seconds">00</span>
+					</div>
+				</div>
+				<div class="game__flag">
+					<i class="icon ri-flag-2-line"></i>
+					<span id="countFlag">10</span>
+				</div>
+
+				<div class="game__settings">
+					<ul class="menu">
+						<li class="menu__new-game">New game</li>
+						<li class="menu__records">My records</li>
+						<li class="menu__level">level:<br>
+							<div class="menu__level-wrapper">
+								<span class="level-easy">easy</span>
+								<span class="level-hard">hard</span>
+								<span class="level-expert">expert</span>
+							</div>
+						</li>
+					</ul>
+					<i class="icon ri-settings-4-line" id="settings"></i>
+				</div>
+			</div>
+			<div class="game__field" id="field">
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal">
+		<div class="modal__content">
+			<div class="modal__title"></div>
+			<p class="modal__descr"></p>
+			<button class="modal__close">
+				<i class="ri-close-line"></i>
+			</button>
+		</div>
+	</div>
+</body>
+
+</html>
